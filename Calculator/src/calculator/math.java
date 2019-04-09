@@ -33,5 +33,41 @@ public class math {
         a=Math.sqrt(a);
         return a.toString();
     }
+    
+    
+    public double calc(double previous,int ope,String number)
+    {
+        
+        /*
+            0 plus
+            1 minus
+            2 multiplication
+            3 division
+            4 power
+            5 mod
+        */
+        double current=Double.parseDouble(number);
+        if(ope==0)
+        {
+            previous+=current;
+            System.out.println(previous);
+        }
+        else if(ope==1)previous-=current;
+        else if(ope==2)previous*=current;
+        else if(ope==3)previous/=current;
+        else if(ope==4)previous=Math.pow(previous, current);
+        else if(ope==5)
+        {
+            if(!comp.isAnyDot(number))
+            {
+                int curr=Integer.parseInt(number);
+                int pre=(int) previous;
+                return (double)(pre%curr);
+            }
+        }
+//        else System.out.println("paisi na "+ope+" "+current+" "+previous);
+        return previous;
+    }
+        
 }
 

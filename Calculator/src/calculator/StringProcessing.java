@@ -46,4 +46,9 @@ public class StringProcessing {
         for(int i=0;i<s.length() && s.charAt(i)!='.';i++)c++;
         return c;
     }
+    public boolean isAnyDot(String s)
+    {
+        for(int i=0;i<s.length();i++)if(s.charAt(i)=='.')return true;
+        return false;
+    }
 }
